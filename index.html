@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Changer</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column; /* Make elements stack vertically */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: background-color 0.5s ease;
+      background-color: rgb(37, 26, 26);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: yellow;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click the button to change color</h1>
+
+  <button id="colorButton" onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange','black'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html>
